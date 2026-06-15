@@ -35,9 +35,9 @@
 /* Panel content: stagger in with slight rightward-to-natural translate */
 .twoCards .serviceCard h4 { color:#081258; font-size:20px; font-weight:900; line-height:1.2; margin:0 0 10px; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 130ms,transform 270ms ease 130ms; }
 .twoCards .serviceCard:hover h4 { opacity:1; transform:translateX(0); }
-.twoCards .serviceCard p { color:#4b5568; font-size:15px; font-weight:700; line-height:1.6; margin:0; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 180ms,transform 270ms ease 180ms; height:auto; overflow:visible; }
+.twoCards .serviceCard p { color:#4b5568; font-size:15px; font-weight:400; line-height:1.6; margin:0; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 180ms,transform 270ms ease 180ms; height:auto; overflow:visible; }
 .twoCards .serviceCard:hover p { opacity:1; transform:translateX(0); }
-.twoCards .serviceCard .serviceBullets { color:#374151; font-size:14px; font-weight:800; gap:5px; margin:10px 0 0; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 230ms,transform 270ms ease 230ms; }
+.twoCards .serviceCard .serviceBullets { color:#374151; font-size:14px; font-weight:400; gap:5px; margin:10px 0 0; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 230ms,transform 270ms ease 230ms; }
 .twoCards .serviceCard:hover .serviceBullets { opacity:1; transform:translateX(0); }
 /* fourCards (Performance & Support): full-image card */
 .fourCards .serviceCard { grid-template-columns:1fr; gap:0; padding:0; overflow:hidden; position:relative; min-height:405px; }
@@ -57,8 +57,8 @@
 .fourCards .serviceCard > div { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-end; height:100%; padding:18px; }
 /* Typography — consistent across all cards in each section */
 .serviceCard h4 { margin:0 0 8px; color:#081258; font-size:18px; font-weight:900; line-height:1.2; }
-.serviceCard p { margin:0; color:#071037; font-size:15px; font-weight:700; line-height:1.65; }
-.serviceBullets { display:grid; gap:6px; margin:12px 0 0; padding:0; list-style:none; color:#071037; font-size:14px; font-weight:800; line-height:1.35; }
+.serviceCard p { margin:0; color:#071037; font-size:15px; font-weight:400; line-height:1.65; }
+.serviceBullets { display:grid; gap:6px; margin:12px 0 0; padding:0; list-style:none; color:#071037; font-size:14px; font-weight:400; line-height:1.35; }
 /* fourCards typography: heading always white+visible; desc+bullets hidden until hover */
 .fourCards .serviceCard h4 { color:#fff; margin:0; }
 .fourCards .serviceCard p { color:rgba(255,255,255,.88); font-size:15px; line-height:1.55; max-height:0; overflow:hidden; opacity:0; margin:0; transition:max-height 380ms ease,opacity 280ms ease,margin 280ms ease; }
@@ -98,8 +98,8 @@
 .cleaningImgWrap { position:relative; width:55%; height:100%; flex-shrink:0; overflow:hidden; }
 .cleaningContent { width:45%; padding:24px 22px; display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; }
 .cleaningHorizontal h4 { margin:0 0 10px; color:#081258; font-size:18px; font-weight:900; line-height:1.2; }
-.cleaningHorizontal p { margin:0; color:#071037; font-size:15px; font-weight:700; line-height:1.65; height:auto; overflow:visible; }
-.cleaningHorizontal .serviceBullets { color:#071037; font-size:14px; font-weight:800; gap:5px; margin-top:12px; opacity:1; transform:none; max-height:none; overflow:visible; }
+.cleaningHorizontal p { margin:0; color:#071037; font-size:15px; font-weight:400; line-height:1.65; height:auto; overflow:visible; }
+.cleaningHorizontal .serviceBullets { color:#071037; font-size:14px; font-weight:400; gap:5px; margin-top:12px; opacity:1; transform:none; max-height:none; overflow:visible; }
 .cleaningHorizontal .requestService { margin-top:auto; opacity:1 !important; transform:none !important; }
 
 /* ── Taller horizontal cards for Inspection / Maintenance / Performance sections ── */
@@ -152,18 +152,18 @@
 .advancedPackage { background:#001B5E; }
 .packageBody { display:flex; min-height:260px; flex-direction:column; padding:18px 22px 22px; color:#081258; }
 /* Description locked to exactly 3 lines so Includes + checklist align across all cards */
-.packageBody p { margin:0 0 14px; font-size:13px; font-weight:700; line-height:1.7; height:calc(1.7em * 3); overflow:hidden; }
+.packageBody p { margin:0 0 14px; font-size:13px; font-weight:400; line-height:1.7; height:calc(1.7em * 3); overflow:hidden; }
 .packageBody b,.packageBody strong { color:#075eb8; font-size:12px; font-weight:900; }
 .packageBody strong { margin-top:auto; color:#081258; }
 .packageBody ul { display:grid; gap:10px; margin:10px 0 0; padding:0; list-style:none; }
 /* Circular tick icon — base */
-.packageBody li { display:flex; align-items:center; gap:10px; padding-left:0; font-size:13px; font-weight:800; line-height:1.35; }
+.packageBody li { display:flex; align-items:center; gap:10px; padding-left:0; font-size:13px; font-weight:400; line-height:1.35; }
 .packageBody li::before { content:"✓"; flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border-radius:50%; font-size:10px; font-weight:900; color:#fff; }
 /* Per-package tick colours matching card header */
 .greenFeatures li::before { background:#008736; }
 .blueFeatures li::before { background:#086fe3; }
 .darkFeatures li::before { background:#2a4a9e; }
-.packageNote { margin:18px auto 0; max-width:680px; color:#4b5563; font-size:13px; font-weight:700; line-height:1.65; text-align:center; }
+.packageNote { margin:18px auto 0; max-width:680px; color:#4b5563; font-size:13px; font-weight:400; line-height:1.65; text-align:center; }
 .packageAction { display:flex; justify-content:center; margin-top:18px; }
 .packageAction :global(.button) { background:#4DBCC2; transition:transform 300ms ease,box-shadow 300ms ease; }
 .packageAction :global(.button):hover { transform:scale(1.04); box-shadow:0 8px 24px rgba(77,188,194,.35); }

@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import MobileNav from "./components/MobileNav";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Clenvo | Solar Cleaning Solutions",
@@ -10,7 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={geistSans.variable}>
         <MobileNav />
         {children}
         <div className="social-float">
