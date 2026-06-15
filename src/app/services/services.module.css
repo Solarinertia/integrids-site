@@ -1,0 +1,231 @@
+.page { background:#fff; color:#071037; }
+.hero { min-height:350px; display:grid; place-items:center; background:linear-gradient(180deg,rgba(255,255,255,.28),rgba(255,255,255,.68)),url("/assets/About us/who we are.png") center/cover no-repeat; border-top:1px solid #e9edf4; }
+.heroInner { width:min(100% - 54px,1220px); margin:auto; padding:62px 0 70px; text-align:center; }
+.hero h1 { margin:0; color:#071037; font-size:42px; line-height:1.16; letter-spacing:-1px; }
+.hero p { margin:22px auto 0; max-width:640px; color:#071037; font-size:17px; font-weight:700; line-height:1.65; }
+.hero span { display:block; width:58px; height:3px; margin:18px auto 0; background:#4DBCC2; }
+.wrap { width:min(100% - 64px,1220px); margin:64px auto 0; }
+.sectionTitle { position:relative; margin:0 0 24px; color:#081258; font-size:30px; font-weight:900; text-align:center; }
+.sectionTitle span { display:block; width:50px; height:2px; margin:10px auto 0; background:#4DBCC2; }
+.groups { display:grid; gap:64px; }
+.group { position:relative; }
+.groupHeading { display:grid; grid-template-columns:1fr auto 1fr; gap:22px; align-items:center; margin-bottom:10px; }
+.groupHeading i { height:1px; background:#dce2ec; }
+.groupHeading h3 { margin:0; color:#081258; font-size:26px; font-weight:900; text-align:center; }
+.serviceGrid { display:grid; gap:18px; }
+.twoCards { grid-template-columns:repeat(2,1fr); }
+.threeCards { grid-template-columns:repeat(3,1fr); gap:36px; }
+.fourCards { grid-template-columns:repeat(4,1fr); }
+/* ── Service card: 50/50 image | text layout ── */
+.serviceCard { display:grid; grid-template-columns:1fr 1fr; gap:0; min-height:210px; padding:0; border:1px solid #e5e9f1; border-radius:12px; background:#fff; box-shadow:0 7px 20px rgba(0,0,0,.045); transition:transform 280ms ease,box-shadow 280ms ease; overflow:hidden; }
+/* ── CLEANING SERVICES: full-image default, white panel slides from right on hover ── */
+/* Card container: block so absolutely-positioned children fill it */
+.twoCards .serviceCard { display:block; position:relative; height:300px; min-height:0; overflow:hidden; }
+/* Cancel the default card lift — cleaning cards use their own interaction */
+.twoCards .serviceCard:hover { transform:none; box-shadow:0 7px 20px rgba(0,0,0,.045); }
+/* Image fills entire card */
+.twoCards .serviceCard img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; filter:brightness(1.05); }
+/* ::before = gradient scrim + heading title via data-title attribute */
+.twoCards .serviceCard::before { content:attr(data-title); position:absolute; bottom:0; left:0; right:0; padding:80px 24px 22px; background:linear-gradient(to top,rgba(4,9,36,.82) 0%,rgba(4,9,36,.20) 70%,transparent 100%); color:#fff; font-size:20px; font-weight:900; letter-spacing:-.3px; text-align:center; z-index:2; pointer-events:none; transition:opacity 350ms ease; }
+/* Fade heading overlay out as panel arrives */
+.twoCards .serviceCard:hover::before { opacity:0; }
+/* Content panel: sits off-screen to the right, slides left on hover */
+.twoCards .serviceCard > div { position:absolute; top:0; right:0; width:50%; height:100%; background:#fff; z-index:3; display:flex; flex-direction:column; justify-content:center; padding:28px 22px; transform:translateX(100%); transition:transform 420ms cubic-bezier(.4,0,.2,1); overflow:hidden; }
+.twoCards .serviceCard:hover > div { transform:translateX(0); }
+/* Panel content: stagger in with slight rightward-to-natural translate */
+.twoCards .serviceCard h4 { color:#081258; font-size:20px; font-weight:900; line-height:1.2; margin:0 0 10px; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 130ms,transform 270ms ease 130ms; }
+.twoCards .serviceCard:hover h4 { opacity:1; transform:translateX(0); }
+.twoCards .serviceCard p { color:#4b5568; font-size:15px; font-weight:700; line-height:1.6; margin:0; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 180ms,transform 270ms ease 180ms; height:auto; overflow:visible; }
+.twoCards .serviceCard:hover p { opacity:1; transform:translateX(0); }
+.twoCards .serviceCard .serviceBullets { color:#374151; font-size:14px; font-weight:800; gap:5px; margin:10px 0 0; opacity:0; transform:translateX(14px); transition:opacity 270ms ease 230ms,transform 270ms ease 230ms; }
+.twoCards .serviceCard:hover .serviceBullets { opacity:1; transform:translateX(0); }
+/* fourCards (Performance & Support): full-image card */
+.fourCards .serviceCard { grid-template-columns:1fr; gap:0; padding:0; overflow:hidden; position:relative; min-height:405px; }
+/* Dark gradient overlay via pseudo-element */
+.fourCards .serviceCard::before { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(4,9,36,.78) 0%,rgba(4,9,36,.34) 55%,rgba(4,9,36,.10) 100%); z-index:1; pointer-events:none; transition:opacity 350ms ease; }
+.serviceCard:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(3,17,58,.1); }
+/* fourCards hover: scale instead of translate, boost z-index so it sits above siblings */
+.fourCards .serviceCard:hover { transform:scale(1.04); z-index:5; box-shadow:0 20px 40px rgba(3,17,58,.22); }
+/* Image fills the full height of the left 50% */
+.serviceCard img { width:100%; height:100%; object-fit:cover; border-radius:0; display:block; }
+/* fourCards image: fills entire card, zooms on hover */
+.fourCards .serviceCard img { position:absolute; inset:0; width:100%; height:100%; border-radius:0; filter:brightness(1.18); transition:transform 500ms ease; }
+.fourCards .serviceCard:hover img { transform:scale(1.08); }
+/* Text column: flex column so heading/desc/bullets stack with consistent spacing */
+.serviceCard > div { padding:18px 20px; display:flex; flex-direction:column; justify-content:flex-start; }
+/* fourCards text: sits above image, anchored to bottom */
+.fourCards .serviceCard > div { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-end; height:100%; padding:18px; }
+/* Typography — consistent across all cards in each section */
+.serviceCard h4 { margin:0 0 8px; color:#081258; font-size:18px; font-weight:900; line-height:1.2; }
+.serviceCard p { margin:0; color:#071037; font-size:15px; font-weight:700; line-height:1.65; }
+.serviceBullets { display:grid; gap:6px; margin:12px 0 0; padding:0; list-style:none; color:#071037; font-size:14px; font-weight:800; line-height:1.35; }
+/* fourCards typography: heading always white+visible; desc+bullets hidden until hover */
+.fourCards .serviceCard h4 { color:#fff; margin:0; }
+.fourCards .serviceCard p { color:rgba(255,255,255,.88); font-size:15px; line-height:1.55; max-height:0; overflow:hidden; opacity:0; margin:0; transition:max-height 380ms ease,opacity 280ms ease,margin 280ms ease; }
+.fourCards .serviceCard .serviceBullets { color:rgba(255,255,255,.82); max-height:0; overflow:hidden; opacity:0; margin:0; gap:4px; transition:max-height 380ms ease 60ms,opacity 280ms ease 60ms,margin 280ms ease 60ms; }
+.fourCards .serviceCard:hover p { max-height:120px; opacity:1; margin-top:8px; }
+.fourCards .serviceCard:hover .serviceBullets { max-height:180px; opacity:1; margin-top:8px; }
+/* ── threeCards (Inspection + Maintenance): full-image cards with sibling-shrink hover ── */
+.threeCards .serviceCard { grid-template-columns:1fr; position:relative; overflow:hidden; min-height:336px; padding:0; }
+.threeCards .serviceCard::before { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(4,9,36,.82) 0%,rgba(4,9,36,.36) 55%,rgba(4,9,36,.12) 100%); z-index:1; pointer-events:none; }
+.threeCards .serviceCard img { position:absolute; inset:0; width:100%; height:100%; border-radius:0; filter:brightness(1.15); transition:transform 500ms ease; }
+/* all siblings shrink when any card in the group is hovered */
+.threeCards:hover .serviceCard { transform:scale(0.96); transition:transform 380ms ease,box-shadow 380ms ease; }
+/* hovered card expands over siblings */
+.threeCards .serviceCard:hover { transform:scale(1.04) !important; z-index:5; box-shadow:0 20px 40px rgba(3,17,58,.22); }
+.threeCards .serviceCard:hover img { transform:scale(1.08); }
+/* text div anchored to bottom, above image+overlay */
+.threeCards .serviceCard > div { position:relative; z-index:2; display:flex; flex-direction:column; justify-content:flex-end; height:100%; padding:18px; }
+/* heading always white and visible */
+.threeCards .serviceCard h4 { color:#fff; margin:0; }
+/* description: hidden by default — override cleaningCard p height lock */
+.threeCards .serviceCard p { color:rgba(255,255,255,.88); font-size:15px; line-height:1.55; max-height:0; height:auto; overflow:hidden; opacity:0; margin:0; transition:max-height 380ms ease,opacity 280ms ease,margin 280ms ease; }
+/* bullets: hidden by default */
+.threeCards .serviceCard .serviceBullets { color:rgba(255,255,255,.82); max-height:0; overflow:hidden; opacity:0; margin:0; gap:4px; transition:max-height 380ms ease 60ms,opacity 280ms ease 60ms,margin 280ms ease 60ms; }
+/* reveal description + bullets on hover */
+.threeCards .serviceCard:hover p { max-height:120px; opacity:1; margin-top:8px; }
+.threeCards .serviceCard:hover .serviceBullets { max-height:180px; opacity:1; margin-top:8px; }
+/* cleaningCard: neutralise base padding — layout handled entirely by twoCards overrides above */
+.cleaningCard { padding:0; }
+.cleaningCard h4 { margin-bottom:0; }
+.cleaningCard p { height:auto; overflow:visible; }
+.cleaningCard .serviceBullets { }
+
+/* ── Cleaning Cards: simple horizontal 50/50 layout ── */
+.cleaningCards { grid-template-columns:repeat(2,1fr); gap:28px; }
+.cleaningHorizontal { display:flex; flex-direction:row; height:300px; min-height:0; padding:0; }
+.cleaningHorizontal:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(3,17,58,.1); }
+.cleaningImgWrap { position:relative; width:55%; height:100%; flex-shrink:0; overflow:hidden; }
+.cleaningContent { width:45%; padding:24px 22px; display:flex; flex-direction:column; justify-content:flex-start; overflow:hidden; }
+.cleaningHorizontal h4 { margin:0 0 10px; color:#081258; font-size:18px; font-weight:900; line-height:1.2; }
+.cleaningHorizontal p { margin:0; color:#071037; font-size:15px; font-weight:700; line-height:1.65; height:auto; overflow:visible; }
+.cleaningHorizontal .serviceBullets { color:#071037; font-size:14px; font-weight:800; gap:5px; margin-top:12px; opacity:1; transform:none; max-height:none; overflow:visible; }
+.cleaningHorizontal .requestService { margin-top:auto; opacity:1 !important; transform:none !important; }
+
+/* ── Taller horizontal cards for Inspection / Maintenance / Performance sections ── */
+.horizontalTall { height:380px; }
+.horizontalTall .cleaningContent { padding:28px 24px; display:flex; flex-direction:column; }
+/* Lock heading to 2-line height so all headings align even when some wrap */
+.horizontalTall h4 { margin:0 0 12px; min-height:44px; }
+/* Lock description to 3-line height so tick-point lists always start at same Y */
+.horizontalTall p { margin:0; height:75px; overflow:hidden; flex-shrink:0; }
+.horizontalTall .serviceBullets { margin-top:28px; gap:7px; white-space:nowrap; flex-shrink:0; }
+.horizontalTall .requestService { margin-top:auto; padding-top:12px; }
+
+/* ── Horizontal card toggle (Inspection / Maintenance / Performance sections) ── */
+.centeredRow { display:flex; justify-content:center; margin-top:28px; }
+.centeredRow > article { width:calc(50% - 14px); }
+.extraRow { margin-top:28px; }
+.moreBtnWrap { display:flex; justify-content:flex-end; margin-top:14px; }
+.moreBtn { background:none; border:none; color:#4DBCC2; font-size:14px; font-weight:900; cursor:pointer; padding:6px 0; letter-spacing:.01em; transition:opacity .2s ease; }
+.moreBtn:hover { opacity:.7; }
+
+.serviceCard a { display:inline-block; margin-top:15px; color:#4DBCC2; font-size:12px; font-weight:900; }
+
+/* ── Request Service CTA ── */
+.requestService { display:inline-block; margin-top:12px; color:#4DBCC2 !important; font-size:15px !important; font-weight:900 !important; text-decoration:none; cursor:pointer; letter-spacing:.01em; transition:opacity .2s ease; }
+.requestService:hover { opacity:.75; }
+
+/* twoCards: stagger-fade in with the other panel elements */
+.twoCards .serviceCard .requestService { opacity:0; transform:translateX(14px); transition:opacity 270ms ease 280ms,transform 270ms ease 280ms; margin-top:14px; }
+.twoCards .serviceCard:hover .requestService { opacity:1; transform:translateX(0); }
+
+/* threeCards: hidden by default, reveal on card hover */
+.threeCards .serviceCard .requestService { max-height:0; overflow:hidden; opacity:0; margin:0; transition:max-height 380ms ease 90ms,opacity 280ms ease 90ms,margin 280ms ease 90ms; }
+.threeCards .serviceCard:hover .requestService { max-height:40px; opacity:1; margin-top:10px; }
+
+/* fourCards: hidden by default, reveal on card hover */
+.fourCards .serviceCard .requestService { max-height:0; overflow:hidden; opacity:0; margin:0; transition:max-height 380ms ease 90ms,opacity 280ms ease 90ms,margin 280ms ease 90ms; }
+.fourCards .serviceCard:hover .requestService { max-height:40px; opacity:1; margin-top:10px; }
+.packageSubtitle { margin:6px auto 22px; max-width:580px; color:#4b5563; font-size:14px; font-weight:700; line-height:1.65; text-align:center; }
+.packageGrid { display:grid; grid-template-columns:repeat(3,1fr); gap:48px; align-items:stretch; width:min(100%,1040px); margin:0 auto; }
+.packageCard { overflow:hidden; border:1px solid #dce3ee; border-radius:20px; background:#fff; box-shadow:0 10px 30px rgba(3,17,58,.08); position:relative; transition:transform 300ms ease,box-shadow 300ms ease; }
+.packageCard:hover { transform:scale(1.02); box-shadow:0 16px 40px rgba(3,17,58,.14); }
+.packageCard.mostPopular::after { content:"Most Popular"; position:absolute; top:20px; right:-30px; width:120px; padding:6px 0; background:#F4B400; color:#fff; font-size:10px; font-weight:900; text-align:center; letter-spacing:.4px; transform:rotate(45deg); box-shadow:0 2px 8px rgba(0,0,0,.18); z-index:10; pointer-events:none; }
+.packageHead { min-height:96px; display:grid; place-items:center; padding:20px 18px; color:#fff; text-align:center; }
+.packageHeadRow { display:flex; align-items:center; justify-content:center; gap:10px; }
+.packageIcon { width:26px; height:26px; flex:0 0 auto; }
+.packageHead h3 { margin:0; font-size:29px; font-weight:900; letter-spacing:.4px; text-transform:uppercase; }
+.packageHead p { margin:10px 0 0; font-size:15px; font-weight:400; }
+.basicPackage { background:#00A651; }
+.essentialPackage { background:#008C99; }
+.advancedPackage { background:#001B5E; }
+.packageBody { display:flex; min-height:260px; flex-direction:column; padding:18px 22px 22px; color:#081258; }
+/* Description locked to exactly 3 lines so Includes + checklist align across all cards */
+.packageBody p { margin:0 0 14px; font-size:13px; font-weight:700; line-height:1.7; height:calc(1.7em * 3); overflow:hidden; }
+.packageBody b,.packageBody strong { color:#075eb8; font-size:12px; font-weight:900; }
+.packageBody strong { margin-top:auto; color:#081258; }
+.packageBody ul { display:grid; gap:10px; margin:10px 0 0; padding:0; list-style:none; }
+/* Circular tick icon — base */
+.packageBody li { display:flex; align-items:center; gap:10px; padding-left:0; font-size:13px; font-weight:800; line-height:1.35; }
+.packageBody li::before { content:"✓"; flex:0 0 auto; display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px; border-radius:50%; font-size:10px; font-weight:900; color:#fff; }
+/* Per-package tick colours matching card header */
+.greenFeatures li::before { background:#008736; }
+.blueFeatures li::before { background:#086fe3; }
+.darkFeatures li::before { background:#2a4a9e; }
+.packageNote { margin:18px auto 0; max-width:680px; color:#4b5563; font-size:13px; font-weight:700; line-height:1.65; text-align:center; }
+.packageAction { display:flex; justify-content:center; margin-top:18px; }
+.packageAction :global(.button) { background:#4DBCC2; transition:transform 300ms ease,box-shadow 300ms ease; }
+.packageAction :global(.button):hover { transform:scale(1.04); box-shadow:0 8px 24px rgba(77,188,194,.35); }
+.billingTabs { display:flex; justify-content:center; gap:16px; margin:18px auto 0; }
+.billingTabs button { min-width:130px; border:1px solid #071037; border-radius:7px; background:#fff; color:#071037; padding:10px 20px; font-size:13px; font-weight:900; cursor:pointer; }
+.billingTabs button:first-child { background:#071037; color:#fff; }
+.individualGrid { display:grid; grid-template-columns:repeat(5,1fr); gap:18px; }
+.individualCard { display:grid; place-items:center; min-height:154px; padding:16px 12px; border:1px solid #e5e9f1; border-radius:10px; background:#fff; text-align:center; box-shadow:0 7px 20px rgba(0,0,0,.04); transition:transform 280ms ease,box-shadow 280ms ease; }
+.individualCard:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(3,17,58,.1); }
+.individualCard img { width:84px; height:64px; object-fit:contain; }
+.individualCard h3 { margin:10px 0 8px; color:#081258; font-size:15px; font-weight:900; }
+.individualCard b { color:#0e922f; font-size:16px; font-weight:900; }
+.enquiry { display:flex; align-items:center; justify-content:space-between; gap:24px; margin-bottom:28px; padding:28px 34px; border-radius:14px; background:linear-gradient(90deg,#020d2d,#071a53); color:#fff; box-shadow:0 12px 28px rgba(3,17,58,.18); }
+.enquiry :global(.button) { background:#4DBCC2; }
+.enquiry h2 { color:#fff; font-size:26px; }
+.enquiry p { max-width:700px; margin:12px 0 0; color:#fff; font-size:14px; font-weight:700; line-height:1.65; }
+
+
+
+@media (max-width:980px) {
+  .hero h1 { font-size:34px; }
+  .twoCards,.threeCards,.fourCards,.packageGrid { grid-template-columns:1fr; }
+  .serviceCard { grid-template-columns:1fr 1fr; }
+  .twoCards .serviceCard { display:block; grid-template-columns:unset; height:260px; }
+  .threeCards .serviceCard,.fourCards .serviceCard { grid-template-columns:1fr; }
+  .fourCards .serviceCard { padding:0; overflow:hidden; }
+  .fourCards .serviceCard > div { padding:18px; }
+  .individualGrid { grid-template-columns:repeat(3,1fr); }
+  .packageGrid { gap:24px; width:100%; }
+  .packageBody { min-height:auto; }
+  .enquiry { align-items:flex-start; flex-direction:column; }
+}
+@media (max-width:680px) {
+  .heroInner { padding:48px 0 56px; }
+  .hero h1 { font-size:28px; }
+  .individualGrid { grid-template-columns:repeat(2,1fr); }
+  .twoCards .serviceCard { height:220px; }
+  .threeCards .serviceCard { min-height:260px; }
+  .cleaningCards { grid-template-columns:1fr; }
+  .cleaningHorizontal { flex-direction:column; height:auto; }
+  .cleaningImgWrap { width:100%; height:180px; }
+  .cleaningContent { width:100%; }
+  .centeredRow { display:block; }
+  .centeredRow > article { width:100%; }
+}
+
+@media (max-width:560px) {
+  .hero { min-height:320px; }
+  .heroInner,.wrap { width:min(100% - 28px,100%); }
+  .hero h1 { font-size:28px; }
+  .hero p { font-size:13px; }
+  .sectionTitle { font-size:24px; }
+  .groupHeading { grid-template-columns:1fr; gap:8px; }
+  .groupHeading i { display:none; }
+  .serviceCard,.fourCards .serviceCard { grid-template-columns:1fr; }
+  .serviceCard img { height:160px; }
+  /* full-image cards keep height:100% — override the height:160px above */
+  .twoCards .serviceCard img,.threeCards .serviceCard img,.fourCards .serviceCard img { height:100%; }
+  .twoCards .serviceCard { height:240px; }
+  .serviceCard > div { padding:14px 16px; }
+  .individualGrid { grid-template-columns:1fr 1fr; }
+  .billingTabs { flex-direction:column; }
+  .billingTabs button { width:100%; }
+  .enquiry { padding:24px 20px; }
+}

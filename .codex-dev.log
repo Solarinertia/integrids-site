@@ -1,0 +1,13 @@
+
+> solarinertia-website@0.1.0 dev
+> next dev -p 3000
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.77:3000
+✓ Ready in 330ms
+
+○ Compiling / ...
+✓ Finished writing to filesystem cache in 47s
+✓ Finished writing to filesystem cache in 23.8s
+✓ Finished writing to filesystem cache in 19.9s
