@@ -1,5 +1,5 @@
 .page { background:#fff; color:#071037; }
-.hero { position:relative; min-height:520px; display:grid; align-items:end; justify-items:center; overflow:hidden; border-top:1px solid #e9edf4; background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.38)); background-color:#fff; }
+.hero { position:relative; min-height:520px; display:grid; align-items:end; justify-items:center; overflow:hidden; background:linear-gradient(180deg,rgba(255,255,255,.18),rgba(255,255,255,.38)); background-color:#fff; }
 .hero::before { position:absolute; inset:0; z-index:0; background:url("/assets/Package/hero section 3.png") center top/cover no-repeat; content:""; }
 .heroInner { width:min(100% - 54px,1220px); margin:0 auto; padding:0 0 32px; text-align:center; }
 .heroInner { position:relative; z-index:1; }
