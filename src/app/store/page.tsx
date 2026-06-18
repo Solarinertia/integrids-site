@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import styles from "./store.module.css";
 
 type CartItem = { id: string; name: string; price: string; image: string; quantity: number };
@@ -600,7 +600,7 @@ function Footer() {
 
 // ── Page ─────────────────────────────────────────────────────────────────────
 
-export default function StorePage() {
+function StorePageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [current, setCurrent] = useState(0);
@@ -963,5 +963,13 @@ export default function StorePage() {
         </div>
       )}
     </main>
+  );
+}
+
+export default function StorePage() {
+  return (
+    <Suspense fallback={null}>
+      <StorePageContent />
+    </Suspense>
   );
 }
