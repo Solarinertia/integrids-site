@@ -121,7 +121,7 @@ const safety = [
 
 const testimonials = [
   ["Operations Head", "Manufacturing Facility", "Integrids helped us improve plant performance and establish a structured maintenance approach that significantly reduced downtime."],
-  ["Facility Manager", "Commercial Rooftop Project", "Their inspection and monitoring services provide complete visibility into our solar asset performance."],
+  ["Facility Manager", "Commercial Rooftop Project", "Their inspection and monitoring services give us complete visibility into our solar asset performance, enabling faster decisions and ensuring long-term reliability."],
   ["Plant Manager", "Industrial Solar Facility", "Professional execution, transparent reporting and measurable performance improvements."],
 ];
 
