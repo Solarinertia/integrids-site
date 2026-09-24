@@ -141,7 +141,7 @@
   .navArrow { width:38px; height:38px; }
 }
 @media (max-width:560px) {
-  .hero { min-height:330px; background:linear-gradient(90deg,#020d2d 0%,rgba(2,13,45,.88) 72%,rgba(2,13,45,.45)),url("/assets/hero/hero-scene.png") center/cover no-repeat; }
+  .hero { min-height:330px; background:linear-gradient(90deg,#020d2d 0%,rgba(2,13,45,.88) 72%,rgba(2,13,45,.45)),url("/assets/hero/hero-scene.webp") center/cover no-repeat; }
   .heroCopy,.wrap { width:min(100% - 28px,100%); }
   .hero h1,.hero h1 em { font-size:28px; }
   .hero p { font-size:13px; }

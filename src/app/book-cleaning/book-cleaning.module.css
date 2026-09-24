@@ -1,5 +1,5 @@
 .page { background:#f7f9fc; color:#071037; }
-.hero { position:relative; min-height:100vh; overflow:hidden; background:#03113a url("/assets/Book Cleaning/Hero Section.png") center/cover no-repeat; color:#fff; }
+.hero { position:relative; min-height:100vh; overflow:hidden; background:#03113a url("/assets/Book Cleaning/Hero Section.webp") center/cover no-repeat; color:#fff; }
 .heroShade { position:absolute; inset:0; background:linear-gradient(90deg,rgba(2,9,31,.78) 0%,rgba(2,9,31,.56) 40%,rgba(2,9,31,.08) 72%); }
 .heroCopy { position:relative; width:min(100% - 72px,1220px); margin:0 auto; padding:58px 0 34px; }
 .heroCopy p { margin:0 0 22px; color:#18c5ff; font-size:14px; font-weight:900; letter-spacing:.5px; }

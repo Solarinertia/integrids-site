@@ -160,8 +160,8 @@ const serviceGroups: ServiceGroup[] = [
     layout: styles.twoCards,
     id: "cleaning-services",
     services: [
-      ["Robotic Cleaning", "AI-powered autonomous cleaning for large-scale solar plants with water-efficient operation.", "/assets/Service Page/Robotic Cleaning 3.png", ["Autonomous Operation", "Water Efficient", "Utility Scale"]],
-      ["Manual Cleaning", "Professional manual cleaning for rooftops and accessible solar systems by trained technicians.", "/assets/Service Page/Manual Cleaning 4.png", ["Trained Technicians", "Safe Panel Handling", "Detailed Cleaning"]],
+      ["Robotic Cleaning", "AI-powered autonomous cleaning for large-scale solar plants with water-efficient operation.", "/assets/Service Page/Robotic Cleaning 3.webp", ["Autonomous Operation", "Water Efficient", "Utility Scale"]],
+      ["Manual Cleaning", "Professional manual cleaning for rooftops and accessible solar systems by trained technicians.", "/assets/Service Page/Manual Cleaning 4.webp", ["Trained Technicians", "Safe Panel Handling", "Detailed Cleaning"]],
     ],
   },
   {
@@ -169,18 +169,18 @@ const serviceGroups: ServiceGroup[] = [
     layout: styles.threeCards,
     id: "inspection-services",
     services: [
-      ["Drone Inspection", "High-resolution drone imaging to detect faults and performance losses.", "/assets/Service Page/Drone Inspection.png", ["High Resolution Mapping", "Defect Detection", "Plant Health Analysis"]],
-      ["Electrical Inspection", "Detailed electrical checks to ensure safety, reliability and optimal performance.", "/assets/Service Page/Electical inspection.png", ["String Testing", "Voltage & Current Checks", "Cable & Connection Check"]],
-      ["Thermal Inspection", "Identify hotspots and thermal anomalies that impact performance and safety.", "/assets/Service Page/Thermal Inspection.png", ["Hotspot Detection", "Module Fault Identification", "Thermal Reporting"]],
+      ["Drone Inspection", "High-resolution drone imaging to detect faults and performance losses.", "/assets/Service Page/Drone Inspection.webp", ["High Resolution Mapping", "Defect Detection", "Plant Health Analysis"]],
+      ["Electrical Inspection", "Detailed electrical checks to ensure safety, reliability and optimal performance.", "/assets/Service Page/Electical inspection.webp", ["String Testing", "Voltage & Current Checks", "Cable & Connection Check"]],
+      ["Thermal Inspection", "Identify hotspots and thermal anomalies that impact performance and safety.", "/assets/Service Page/Thermal Inspection.webp", ["Hotspot Detection", "Module Fault Identification", "Thermal Reporting"]],
     ],
   },
   {
     title: "Maintenance Services",
     layout: styles.threeCards,
     services: [
-      ["Preventive Maintenance", "Regular inspections and servicing to prevent issues and extend system life.", "/assets/Service Page/Preventive Maintenance.png", ["Module & Structure Check", "Inverter & Electrical Checks", "Cable & Earthing Inspection"]],
-      ["Corrective Maintenance", "Quick issue resolution to minimize downtime and restore performance.", "/assets/Service Page/Corrective Maintenance.png", ["Fault Rectification", "Component Replacement", "Emergency Support"]],
-      ["Repair & Reinstall", "Expert repairs and reinstallation for damaged or underperforming components.", "/assets/Service Page/Repair & Reinstall.png", ["Broken Module Replacement", "Reinstallation Services", "Structure Repair"]],
+      ["Preventive Maintenance", "Regular inspections and servicing to prevent issues and extend system life.", "/assets/Service Page/Preventive Maintenance.webp", ["Module & Structure Check", "Inverter & Electrical Checks", "Cable & Earthing Inspection"]],
+      ["Corrective Maintenance", "Quick issue resolution to minimize downtime and restore performance.", "/assets/Service Page/Corrective Maintenance.webp", ["Fault Rectification", "Component Replacement", "Emergency Support"]],
+      ["Repair & Reinstall", "Expert repairs and reinstallation for damaged or underperforming components.", "/assets/Service Page/Repair & Reinstall.webp", ["Broken Module Replacement", "Reinstallation Services", "Structure Repair"]],
     ],
   },
   {
@@ -188,10 +188,10 @@ const serviceGroups: ServiceGroup[] = [
     layout: styles.fourCards,
     id: "performance-support-services",
     services: [
-      ["Performance Optimization", "Data analysis and system tuning to maximize energy generation.", "/assets/Service Page/Performance Optimization.png", ["PR Analysis", "Generation Analysis", "Loss Analysis", "Actionable Recommendation"]],
-      ["Remote Monitoring", "24/7 remote monitoring for real-time insights, alerts and reporting.", "/assets/Service Page/Remote Monitoring.png", ["Inverter Monitoring", "Generation Tracking", "Alert Management", "Monthly Reports"]],
-      ["AMC Contracts", "Comprehensive Annual Maintenance Contracts for hassle-free operations.", "/assets/Service Page/AMC Contract.png", ["Custom AMC Plans", "Routine Maintenance", "Priority Support", "Annual Performance Review"]],
-      ["Support & Consultation", "Expert guidance and technical support whenever your solar site needs it.", "/assets/Service Page/Support & Consultation.png", ["Technical Consultation", "Performance Review", "Support Team Access", "Site Visit Support"]],
+      ["Performance Optimization", "Data analysis and system tuning to maximize energy generation.", "/assets/Service Page/Performance Optimization.webp", ["PR Analysis", "Generation Analysis", "Loss Analysis", "Actionable Recommendation"]],
+      ["Remote Monitoring", "24/7 remote monitoring for real-time insights, alerts and reporting.", "/assets/Service Page/Remote Monitoring.webp", ["Inverter Monitoring", "Generation Tracking", "Alert Management", "Monthly Reports"]],
+      ["AMC Contracts", "Comprehensive Annual Maintenance Contracts for hassle-free operations.", "/assets/Service Page/AMC Contract.webp", ["Custom AMC Plans", "Routine Maintenance", "Priority Support", "Annual Performance Review"]],
+      ["Support & Consultation", "Expert guidance and technical support whenever your solar site needs it.", "/assets/Service Page/Support & Consultation.webp", ["Technical Consultation", "Performance Review", "Support Team Access", "Site Visit Support"]],
     ],
   },
 ];
@@ -240,7 +240,7 @@ const packages = [
 function Logo() {
   return (
     <Link className="logo" href="/">
-      <Image className="brand-logo" src="/assets/Navbar/LOGO.png" alt="Integrids" width={1024} height={827} priority />
+      <Image className="brand-logo" src="/assets/Navbar/LOGO.webp" alt="Integrids" width={1024} height={827} priority />
     </Link>
   );
 }
@@ -252,7 +252,7 @@ function SectionTitle({ children }: { children: string }) {
 function Footer() {
   return (
     <footer>
-      <Link className="footer-logo-link" href="/"><img className="footer-logo-img" src="/assets/Navbar/LOGO.png" alt="Integrids" /></Link>
+      <Link className="footer-logo-link" href="/"><img className="footer-logo-img" src="/assets/Navbar/LOGO.webp" alt="Integrids" /></Link>
       <div><b>QUICK LINKS</b><p><br /><Link href="/about-us">About Us</Link><br /><Link href="/services">Services</Link><br /><Link href="/store">Store</Link></p></div>
       <div><b>SERVICES</b><p><Link href="/services#cleaning-services">Robotic Cleaning</Link><br /><Link href="/services#cleaning-services">Manual Cleaning</Link><br /><Link href="/services#inspection-services">Inspection Services</Link><br /><Link href="/services#performance-support-services">Performance Optimization</Link><br /><Link href="/services#performance-support-services">AMC Contracts</Link></p></div>
       <div><b>CONTACT US</b><p><a href="tel:+918424097069">8424097069</a><br /><a href="mailto:info@integrids.in">info@integrids.in</a><br /><a href="https://www.google.com/maps/place/SOLARINERTIA+POWER+PVT+LTD/@20.3227691,72.9687473,654m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be0cd8eca385029:0x85d13c646149b569!8m2!3d20.3227641!4d72.9713222!16s%2Fg%2F11q48036y2?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Silvassa, Gujarat</a><br /><a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjY6JiFh4mVAxUAAAAAHQAAAAAQLw..i&pvq=CgwvZy8xaGh4OHE3dnciEwoNc29sYXIgaW5lcnRpYRACGAM&lqi=ChZzb2xhciBpbmVydGlhIHNpbHZhc3NhSNu-rMS_j4CACFocEAAQASIWc29sYXIgaW5lcnRpYSBzaWx2YXNzYZIBFHNvbGFyX2VuZXJneV9jb21wYW55&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3be7c86c6e5d6429:0x4d43856bf5803219" target="_blank" rel="noopener noreferrer">Mumbai, Maharashtra</a></p></div>
@@ -280,7 +280,7 @@ export default function ServicesPage() {
     <main className={styles.page}>
       <header>
         <Logo />
-        <Link href="/" aria-label="Home"><img src="/assets/Navbar/GS.png" alt="" className="navbar-ig" /></Link>
+        <Link href="/" aria-label="Home"><img src="/assets/Navbar/GS.webp" alt="" className="navbar-ig" /></Link>
         <nav>
           <Link href="/about-us">About Us</Link>
           <Link className="active" href="/services">Services</Link>

@@ -34,12 +34,12 @@ const whyChoose = [
 ];
 
 const whyChooseImages = [
-  "/assets/About us/Why choose integrids/Water Optimized.png",
-  "/assets/About us/Why choose integrids/Advanced Robotic.png",
-  "/assets/About us/Why choose integrids/Drone based Inspection 2.png",
-  "/assets/About us/Why choose integrids/Performance Analytics 2.png",
-  "/assets/About us/Why choose integrids/AMC Plans 2.png",
-  "/assets/About us/Why choose integrids/Trained, Safety 2.png",
+  "/assets/About us/Why choose integrids/Water Optimized.webp",
+  "/assets/About us/Why choose integrids/Advanced Robotic.webp",
+  "/assets/About us/Why choose integrids/Drone based Inspection 2.webp",
+  "/assets/About us/Why choose integrids/Performance Analytics 2.webp",
+  "/assets/About us/Why choose integrids/AMC Plans 2.webp",
+  "/assets/About us/Why choose integrids/Trained, Safety 2.webp",
 ];
 
 const whyChooseIcons = [
@@ -55,27 +55,27 @@ const whyExistsCards = [
   {
     title: "Sustained Performance",
     description: "Maintain peak performance with lasting reliability.",
-    icon: "/assets/About us/why integrids exists/Sustained Performance.png",
+    icon: "/assets/About us/why integrids exists/Sustained Performance.webp",
   },
   {
     title: "Performance Assurance",
     description: "Reliable performance through proactive protection.",
-    icon: "/assets/About us/why integrids exists/Performance assurance.png",
+    icon: "/assets/About us/why integrids exists/Performance assurance.webp",
   },
   {
     title: "Better Performance",
     description: "Boosts energy output and system efficiency",
-    icon: "/assets/About us/why integrids exists/better performance.png",
+    icon: "/assets/About us/why integrids exists/better performance.webp",
   },
   {
     title: "Environment Friendly",
     description: "Promotes clean energy and reduces footprint.",
-    icon: "/assets/About us/why integrids exists/environment friendly.png",
+    icon: "/assets/About us/why integrids exists/environment friendly.webp",
   },
   {
     title: "Higher Returns",
     description: "Improves ROI and lowers operational costs",
-    icon: "/assets/About us/why integrids exists/higher return potential.png",
+    icon: "/assets/About us/why integrids exists/higher return potential.webp",
   },
 ];
 
@@ -128,7 +128,7 @@ const testimonials = [
 function Logo() {
   return (
     <Link className="logo" href="/">
-      <Image className="brand-logo" src="/assets/Navbar/LOGO.png" alt="Integrids" width={1024} height={827} priority />
+      <Image className="brand-logo" src="/assets/Navbar/LOGO.webp" alt="Integrids" width={1024} height={827} priority />
     </Link>
   );
 }
@@ -136,7 +136,7 @@ function Logo() {
 function Footer() {
   return (
     <footer>
-      <Link className="footer-logo-link" href="/"><img className="footer-logo-img" src="/assets/Navbar/LOGO.png" alt="Integrids" /></Link>
+      <Link className="footer-logo-link" href="/"><img className="footer-logo-img" src="/assets/Navbar/LOGO.webp" alt="Integrids" /></Link>
       <div><b>QUICK LINKS</b><p><br /><Link href="/about-us">About Us</Link><br /><Link href="/services">Services</Link><br /><Link href="/store">Store</Link></p></div>
       <div><b>SERVICES</b><p><Link href="/services#cleaning-services">Robotic Cleaning</Link><br /><Link href="/services#cleaning-services">Manual Cleaning</Link><br /><Link href="/services#inspection-services">Inspection Services</Link><br /><Link href="/services#performance-support-services">Performance Optimization</Link><br /><Link href="/services#performance-support-services">AMC Contracts</Link></p></div>
       <div><b>CONTACT US</b><p><a href="tel:+918424097069">8424097069</a><br /><a href="mailto:info@integrids.in">info@integrids.in</a><br /><a href="https://www.google.com/maps/place/SOLARINERTIA+POWER+PVT+LTD/@20.3227691,72.9687473,654m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be0cd8eca385029:0x85d13c646149b569!8m2!3d20.3227641!4d72.9713222!16s%2Fg%2F11q48036y2?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Silvassa, Gujarat</a><br /><a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjY6JiFh4mVAxUAAAAAHQAAAAAQLw..i&pvq=CgwvZy8xaGh4OHE3dnciEwoNc29sYXIgaW5lcnRpYRACGAM&lqi=ChZzb2xhciBpbmVydGlhIHNpbHZhc3NhSNu-rMS_j4CACFocEAAQASIWc29sYXIgaW5lcnRpYSBzaWx2YXNzYZIBFHNvbGFyX2VuZXJneV9jb21wYW55&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3be7c86c6e5d6429:0x4d43856bf5803219" target="_blank" rel="noopener noreferrer">Mumbai, Maharashtra</a></p></div>
@@ -245,7 +245,7 @@ export default function AboutUsPage() {
     <main className={styles.page}>
       <header>
         <Logo />
-        <Link href="/" aria-label="Home"><img src="/assets/Navbar/GS.png" alt="" className="navbar-ig" /></Link>
+        <Link href="/" aria-label="Home"><img src="/assets/Navbar/GS.webp" alt="" className="navbar-ig" /></Link>
         <nav>
           <Link className="active" href="/about-us">About Us</Link>
           <Link href="/services">Services</Link>
@@ -274,7 +274,7 @@ export default function AboutUsPage() {
           <p>By combining technical expertise, proactive maintenance and performance-driven strategies, we help asset owners reduce losses, improve reliability and maximize energy generation.</p>
         </div>
         <div className={`${styles.performanceImage} reveal-scale`}>
-          <Image src="/assets/About us/who we are 1.png" alt="Solar asset performance specialist" fill sizes="(max-width: 900px) 100vw, 56vw" />
+          <Image src="/assets/About us/who we are 1.webp" alt="Solar asset performance specialist" fill sizes="(max-width: 900px) 100vw, 56vw" />
           <div className={styles.dashboard}>
             <b>PERFORMANCE OVERVIEW</b>
             <span>Today&apos;s Energy <DecimalCountUp value={1.62} suffix=" MWh" decimals={2} /></span>
@@ -287,7 +287,7 @@ export default function AboutUsPage() {
       <section className={`${styles.wrap} ${styles.beforeAfter} reveal`}>
         <div className={styles.existsVisual}>
           <div className={`${styles.compareBox} reveal-scale`}>
-            <Image src="/assets/About us/why integrids exists.png" alt="Solar asset maintenance and performance" fill sizes="(max-width: 900px) 100vw, 48vw" />
+            <Image src="/assets/About us/why integrids exists.webp" alt="Solar asset maintenance and performance" fill sizes="(max-width: 900px) 100vw, 48vw" />
           </div>
           <div className={styles.existsIconRow}>
             {whyExistsCards.map((card) => (
@@ -529,7 +529,7 @@ export default function AboutUsPage() {
               {[...industries, ...industries].map((industry, index) => (
                 <article key={`${industry}-${index}`}>
                   <div className={styles.industryItem}>
-                    <span><Image src={`/assets/About us/Industries we serve/${industry}.png`} alt="" width={104} height={104} /></span>
+                    <span><Image src={`/assets/About us/Industries we serve/${industry}.webp`} alt="" width={104} height={104} /></span>
                     <b>{industry}</b>
                   </div>
                 </article>
