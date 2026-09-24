@@ -1,5 +1,5 @@
 .page { background:#fff; color:#071037; }
-.hero { min-height:430px; display:flex; align-items:flex-end; background:linear-gradient(90deg,rgba(2,13,45,.92) 0%,rgba(2,13,45,.72) 38%,rgba(2,13,45,.2) 68%),url("/assets/About us/Hero.png") center/cover no-repeat; color:#fff; }
+.hero { min-height:430px; display:flex; align-items:flex-end; background:linear-gradient(90deg,rgba(2,13,45,.92) 0%,rgba(2,13,45,.72) 38%,rgba(2,13,45,.2) 68%),url("/assets/About us/Hero.webp") center/cover no-repeat; color:#fff; }
 .heroInner { width:min(100% - 72px,1220px); margin:0 auto; padding:58px 0 28px; }
 .heroInner > p,.titleBlock span,.impact span { display:block; margin:0 0 9px; color:#4DBCC2; font-size:14px; font-weight:900; text-transform:uppercase; }
 .hero h1 { margin:0; max-width:520px; color:#fff; font-size:56px; line-height:1.02; letter-spacing:-1.8px; }
@@ -95,9 +95,9 @@
 .lowerGrid { display:grid; grid-template-columns:1fr; gap:18px; align-items:stretch; width:min(100% - 72px,1220px); max-width:1220px; overflow:hidden; }
 .approachSection,.safetyCard,.testimonialCard { width:100%; max-width:100%; justify-self:stretch; }
 .safetyCard,.testimonialCard { padding:22px; border-radius:10px; background:#f8fbff; box-shadow:0 7px 22px rgba(3,17,58,.07); }
-.safetyCard { background:linear-gradient(rgba(248,251,255,.82),rgba(248,251,255,.82)),url("/assets/About us/Safety & Quality.png") center center/cover no-repeat; overflow:hidden; }
+.safetyCard { background:linear-gradient(rgba(248,251,255,.82),rgba(248,251,255,.82)),url("/assets/About us/Safety & Quality.webp") center center/cover no-repeat; overflow:hidden; }
 /* ── OUR APPROACH: full-width background section, two-column ── */
-.ourApproach { position:relative; width:min(100% - 72px,1220px); margin:38px auto 0; background:url("/assets/About us/Our approach/our approach background.png") center/cover no-repeat; overflow:hidden; border-radius:10px; }
+.ourApproach { position:relative; width:min(100% - 72px,1220px); margin:38px auto 0; background:url("/assets/About us/Our approach/our approach background.webp") center/cover no-repeat; overflow:hidden; border-radius:10px; }
 /* white fade: left ~60% opaque, fades to transparent by 78% */
 .ourApproach::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.98) 58%,rgba(255,255,255,.12) 72%,rgba(255,255,255,0) 80%); pointer-events:none; z-index:0; }
 .approachContent { position:relative; z-index:1; width:min(100% - 72px,1220px); margin:0 auto; padding:52px 0; display:flex; align-items:flex-start; gap:0; }

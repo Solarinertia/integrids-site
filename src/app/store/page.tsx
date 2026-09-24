@@ -10,50 +10,50 @@ import { submitEnquiry } from "@/lib/enquiryClient";
 type CartItem = { id: string; name: string; price: string; image: string; quantity: number };
 
 const cleaningTools = [
-  ["BEST SELLER", "Solar Panel Cleaning Brush", "₹2,499", "/assets/Store Page/Cleaning/1. Solar Panel Cleaning Brush.png"],
-  ["NEW", "Water-Fed Solar Cleaning Brush", "₹15,999", "/assets/Store Page/Cleaning/2. Water-Fed Solar Cleaning Brush.png"],
-  ["", "Aluminum Telescopic Pole", "₹6,499", "/assets/Store Page/Cleaning/3. Aluminum Telescopic Pole.png"],
-  ["", "Water Hose & Hose Reel Kit", "₹4,999", "/assets/Store Page/Cleaning/4. Water Hose & Hose Reel Kit.png"],
-  ["", "Solar Panel Cleaning Solution", "₹1,799", "/assets/Store Page/Cleaning/5. Solar Panel Cleaning Solution.png"],
-  ["", "Rotating Solar Cleaning Brush", "₹12,999", "/assets/Store Page/Cleaning/6. Rotating Solar Cleaning Brush.png"],
-  ["", "Microfiber Cleaning Mop", "₹1,299", "/assets/Store Page/Cleaning/7. Microfiber Cleaning Mop.png"],
-  ["", "Pole Extension Kit", "₹2,999", "/assets/Store Page/Cleaning/8. Pole Extension Kit.png"],
-  ["", "RO/DI Water Filtration System", "₹49,999", "/assets/Store Page/Cleaning/9. RO DI Water Filtration System.png"],
-  ["", "TDS Meter", "₹999", "/assets/Store Page/Cleaning/10. TDS Meter.png"],
-  ["", "Battery-Powered Rotating Brush", "₹18,999", "/assets/Store Page/Cleaning/11. Battery-Powered Rotating Brush.png"],
-  ["PREMIUM", "Semi-Automatic Solar Cleaning Robot", "₹4,99,999", "/assets/Store Page/Cleaning/12. Semi-Automatic Solar Cleaning Robot.png"],
+  ["BEST SELLER", "Solar Panel Cleaning Brush", "₹2,499", "/assets/Store Page/Cleaning/1. Solar Panel Cleaning Brush.webp"],
+  ["NEW", "Water-Fed Solar Cleaning Brush", "₹15,999", "/assets/Store Page/Cleaning/2. Water-Fed Solar Cleaning Brush.webp"],
+  ["", "Aluminum Telescopic Pole", "₹6,499", "/assets/Store Page/Cleaning/3. Aluminum Telescopic Pole.webp"],
+  ["", "Water Hose & Hose Reel Kit", "₹4,999", "/assets/Store Page/Cleaning/4. Water Hose & Hose Reel Kit.webp"],
+  ["", "Solar Panel Cleaning Solution", "₹1,799", "/assets/Store Page/Cleaning/5. Solar Panel Cleaning Solution.webp"],
+  ["", "Rotating Solar Cleaning Brush", "₹12,999", "/assets/Store Page/Cleaning/6. Rotating Solar Cleaning Brush.webp"],
+  ["", "Microfiber Cleaning Mop", "₹1,299", "/assets/Store Page/Cleaning/7. Microfiber Cleaning Mop.webp"],
+  ["", "Pole Extension Kit", "₹2,999", "/assets/Store Page/Cleaning/8. Pole Extension Kit.webp"],
+  ["", "RO/DI Water Filtration System", "₹49,999", "/assets/Store Page/Cleaning/9. RO DI Water Filtration System.webp"],
+  ["", "TDS Meter", "₹999", "/assets/Store Page/Cleaning/10. TDS Meter.webp"],
+  ["", "Battery-Powered Rotating Brush", "₹18,999", "/assets/Store Page/Cleaning/11. Battery-Powered Rotating Brush.webp"],
+  ["PREMIUM", "Semi-Automatic Solar Cleaning Robot", "₹4,99,999", "/assets/Store Page/Cleaning/12. Semi-Automatic Solar Cleaning Robot.webp"],
 ];
 
 const electricalTools = [
-  ["", "Digital Multimeter", "₹4,999", "/assets/Store Page/Electrical/1. Digital Multimeter.png"],
-  ["", "Clamp Meter", "₹7,999", "/assets/Store Page/Electrical/2. Clamp Meter.png"],
-  ["", "MC4 Crimping Tool", "₹2,499", "/assets/Store Page/Electrical/3. MC4 Crimping Tool.png"],
-  ["", "Infrared Thermometer", "₹2,999", "/assets/Store Page/Electrical/4. Infrared Thermometer.png"],
-  ["", "Irradiance Meter", "₹14,999", "/assets/Store Page/Electrical/5. Irradiance Meter.png"],
-  ["", "MC4 Connector Tool Kit", "₹4,999", "/assets/Store Page/Electrical/6. MC4 Connector Tool Kit.png"],
-  ["", "Cable Cutter", "₹2,999", "/assets/Store Page/Electrical/7. Cable Cutter.png"],
+  ["", "Digital Multimeter", "₹4,999", "/assets/Store Page/Electrical/1. Digital Multimeter.webp"],
+  ["", "Clamp Meter", "₹7,999", "/assets/Store Page/Electrical/2. Clamp Meter.webp"],
+  ["", "MC4 Crimping Tool", "₹2,499", "/assets/Store Page/Electrical/3. MC4 Crimping Tool.webp"],
+  ["", "Infrared Thermometer", "₹2,999", "/assets/Store Page/Electrical/4. Infrared Thermometer.webp"],
+  ["", "Irradiance Meter", "₹14,999", "/assets/Store Page/Electrical/5. Irradiance Meter.webp"],
+  ["", "MC4 Connector Tool Kit", "₹4,999", "/assets/Store Page/Electrical/6. MC4 Connector Tool Kit.webp"],
+  ["", "Cable Cutter", "₹2,999", "/assets/Store Page/Electrical/7. Cable Cutter.webp"],
   ["", "Insulation Resistance Tester (Megger)", "₹24,999", "/assets/Store Page/Electrical/8. Insulation Resistance Tester (Megger).png"],
-  ["", "Earth Resistance Tester", "₹18,999", "/assets/Store Page/Electrical/9. Earth Resistance Tester.png"],
-  ["PREMIUM", "IV Curve Tracer", "₹3,49,999", "/assets/Store Page/Electrical/10. IV Curve Tracer.png"],
-  ["", "Thermal Imaging Camera", "₹79,999", "/assets/Store Page/Electrical/11. Thermal Imaging Camera.png"],
-  ["", "Weather Monitoring Station", "₹1,24,999", "/assets/Store Page/Electrical/12. Weather Monitoring Station.png"],
+  ["", "Earth Resistance Tester", "₹18,999", "/assets/Store Page/Electrical/9. Earth Resistance Tester.webp"],
+  ["PREMIUM", "IV Curve Tracer", "₹3,49,999", "/assets/Store Page/Electrical/10. IV Curve Tracer.webp"],
+  ["", "Thermal Imaging Camera", "₹79,999", "/assets/Store Page/Electrical/11. Thermal Imaging Camera.webp"],
+  ["", "Weather Monitoring Station", "₹1,24,999", "/assets/Store Page/Electrical/12. Weather Monitoring Station.webp"],
 ];
 
 const mechanicalTools = [
-  ["", "Cordless Drill Machine", "₹8,999", "/assets/Store Page/Mechanical/1. Cordless Drill Machine.png"],
-  ["", "Impact Wrench", "₹14,999", "/assets/Store Page/Mechanical/2. Impact Wrench.png"],
-  ["", "Angle Grinder", "₹6,999", "/assets/Store Page/Mechanical/3. Angle Grinder.png"],
-  ["", "Rivet Gun", "₹2,999", "/assets/Store Page/Mechanical/4. Rivet Gun.png"],
-  ["", "Safety Harness & Fall Protection Kit", "₹8,999", "/assets/Store Page/Mechanical/5. Safety Harness & Fall Protection Kit.png"],
-  ["", "Torque Wrench", "₹7,999", "/assets/Store Page/Mechanical/6. Torque Wrench.png"],
-  ["", "Socket & Ratchet Set", "₹4,999", "/assets/Store Page/Mechanical/7. Socket & Ratchet Set.png"],
-  ["", "Combination Spanner Set", "₹2,999", "/assets/Store Page/Mechanical/8. Combination Spanner Set.png"],
-  ["", "Screwdriver Set", "₹1,999", "/assets/Store Page/Mechanical/9. Screwdriver Set.png"],
-  ["", "Pliers Set", "₹2,499", "/assets/Store Page/Mechanical/10. Pliers Set.png"],
-  ["", "Tool Box Set", "₹3,999", "/assets/Store Page/Mechanical/11. Tool Box Set.png"],
-  ["", "Portable Work Light", "₹4,999", "/assets/Store Page/Mechanical/12. Portable Work Light.png"],
-  ["PREMIUM", "Inspection Drone", "₹2,49,999", "/assets/Store Page/Mechanical/13. Inspection Drone.png"],
-  ["", "Laser Distance Meter", "₹5,999", "/assets/Store Page/Mechanical/14. Laser Distance Meter.png"],
+  ["", "Cordless Drill Machine", "₹8,999", "/assets/Store Page/Mechanical/1. Cordless Drill Machine.webp"],
+  ["", "Impact Wrench", "₹14,999", "/assets/Store Page/Mechanical/2. Impact Wrench.webp"],
+  ["", "Angle Grinder", "₹6,999", "/assets/Store Page/Mechanical/3. Angle Grinder.webp"],
+  ["", "Rivet Gun", "₹2,999", "/assets/Store Page/Mechanical/4. Rivet Gun.webp"],
+  ["", "Safety Harness & Fall Protection Kit", "₹8,999", "/assets/Store Page/Mechanical/5. Safety Harness & Fall Protection Kit.webp"],
+  ["", "Torque Wrench", "₹7,999", "/assets/Store Page/Mechanical/6. Torque Wrench.webp"],
+  ["", "Socket & Ratchet Set", "₹4,999", "/assets/Store Page/Mechanical/7. Socket & Ratchet Set.webp"],
+  ["", "Combination Spanner Set", "₹2,999", "/assets/Store Page/Mechanical/8. Combination Spanner Set.webp"],
+  ["", "Screwdriver Set", "₹1,999", "/assets/Store Page/Mechanical/9. Screwdriver Set.webp"],
+  ["", "Pliers Set", "₹2,499", "/assets/Store Page/Mechanical/10. Pliers Set.webp"],
+  ["", "Tool Box Set", "₹3,999", "/assets/Store Page/Mechanical/11. Tool Box Set.webp"],
+  ["", "Portable Work Light", "₹4,999", "/assets/Store Page/Mechanical/12. Portable Work Light.webp"],
+  ["PREMIUM", "Inspection Drone", "₹2,49,999", "/assets/Store Page/Mechanical/13. Inspection Drone.webp"],
+  ["", "Laser Distance Meter", "₹5,999", "/assets/Store Page/Mechanical/14. Laser Distance Meter.webp"],
 ];
 
 const sectionData = [cleaningTools, electricalTools, mechanicalTools];
@@ -388,15 +388,15 @@ function ProductDetails({ detail }: { detail: Detail }) {
 // ── Static components ────────────────────────────────────────────────────────
 
 const services = [
-  ["Manual Cleaning", "₹15 / Panel*", "/assets/services/Manual Cleaning 1.png"],
-  ["Robotic Cleaning", "₹20 / Panel*", "/assets/services/Robotic cleaning 1.png"],
-  ["Drone Inspection", "₹4,500 / MW", "/assets/services/Service ispection.png"],
-  ["Thermal Inspection", "₹3,000 / MW", "/assets/Store Page/Services/Thermal Inspection.png"],
-  ["Electrical Inspection", "₹2,500 / MW", "/assets/Store Page/Services/Electrical Inspection.png"],
-  ["Preventive Maintenance", "₹8 / Panel", "/assets/Store Page/Services/Preventive Maintenance.png"],
-  ["Performance Monitoring", "₹750 / MW / Month", "/assets/Store Page/Services/Performance Monitoring.png"],
-  ["Performance Optimization", "₹2,000 / MW", "/assets/services/Performance Optimization.png"],
-  ["Technical Consultation", "₹5,000 / Visit", "/assets/Store Page/Services/Technical consultation.png"],
+  ["Manual Cleaning", "₹15 / Panel*", "/assets/services/Manual Cleaning 1.webp"],
+  ["Robotic Cleaning", "₹20 / Panel*", "/assets/services/Robotic cleaning 1.webp"],
+  ["Drone Inspection", "₹4,500 / MW", "/assets/services/Service ispection.webp"],
+  ["Thermal Inspection", "₹3,000 / MW", "/assets/Store Page/Services/Thermal Inspection.webp"],
+  ["Electrical Inspection", "₹2,500 / MW", "/assets/Store Page/Services/Electrical Inspection.webp"],
+  ["Preventive Maintenance", "₹8 / Panel", "/assets/Store Page/Services/Preventive Maintenance.webp"],
+  ["Performance Monitoring", "₹750 / MW / Month", "/assets/Store Page/Services/Performance Monitoring.webp"],
+  ["Performance Optimization", "₹2,000 / MW", "/assets/services/Performance Optimization.webp"],
+  ["Technical Consultation", "₹5,000 / Visit", "/assets/Store Page/Services/Technical consultation.webp"],
 ];
 
 const BOOKABLE_SERVICES = new Set(["Robotic Cleaning", "Manual Cleaning"]);
@@ -404,11 +404,11 @@ const BOOKABLE_SERVICES = new Set(["Robotic Cleaning", "Manual Cleaning"]);
 const VISIBLE = 5;
 
 const heroImages = [
-  "/assets/Store Page/Hero section.png",
-  "/assets/Store Page/2.png",
-  "/assets/Store Page/3.png",
-  "/assets/Store Page/4.png",
-  "/assets/Store Page/5.png",
+  "/assets/Store Page/Hero section.webp",
+  "/assets/Store Page/2.webp",
+  "/assets/Store Page/3.webp",
+  "/assets/Store Page/4.webp",
+  "/assets/Store Page/5.webp",
 ];
 
 const heroScrollTargets = [
@@ -573,7 +573,7 @@ function RequestQuoteModal({ initialProduct, onClose }: { initialProduct: string
 function Logo() {
   return (
     <Link className="logo" href="/">
-      <Image className="brand-logo" src="/assets/Navbar/LOGO.png" alt="Integrids" width={1024} height={827} priority />
+      <Image className="brand-logo" src="/assets/Navbar/LOGO.webp" alt="Integrids" width={1024} height={827} priority />
     </Link>
   );
 }
@@ -611,7 +611,7 @@ function ViewMoreBtn({ expanded, onClick }: { expanded: boolean; onClick: () => 
 function Footer() {
   return (
     <footer>
-      <Link className="footer-logo-link" href="/"><img className="footer-logo-img" src="/assets/Navbar/LOGO.png" alt="Integrids" /></Link>
+      <Link className="footer-logo-link" href="/"><img className="footer-logo-img" src="/assets/Navbar/LOGO.webp" alt="Integrids" /></Link>
       <div><b>QUICK LINKS</b><p><br /><Link href="/about-us">About Us</Link><br /><Link href="/services">Services</Link><br /><Link href="/store">Store</Link></p></div>
       <div><b>SERVICES</b><p><Link href="/services#cleaning-services">Robotic Cleaning</Link><br /><Link href="/services#cleaning-services">Manual Cleaning</Link><br /><Link href="/services#inspection-services">Inspection Services</Link><br /><Link href="/services#performance-support-services">Performance Optimization</Link><br /><Link href="/services#performance-support-services">AMC Contracts</Link></p></div>
       <div><b>CONTACT US</b><p><a href="tel:+918424097069">8424097069</a><br /><a href="mailto:info@integrids.in">info@integrids.in</a><br /><a href="https://www.google.com/maps/place/SOLARINERTIA+POWER+PVT+LTD/@20.3227691,72.9687473,654m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be0cd8eca385029:0x85d13c646149b569!8m2!3d20.3227641!4d72.9713222!16s%2Fg%2F11q48036y2?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Silvassa, Gujarat</a><br /><a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjY6JiFh4mVAxUAAAAAHQAAAAAQLw..i&pvq=CgwvZy8xaGh4OHE3dnciEwoNc29sYXIgaW5lcnRpYRACGAM&lqi=ChZzb2xhciBpbmVydGlhIHNpbHZhc3NhSNu-rMS_j4CACFocEAAQASIWc29sYXIgaW5lcnRpYSBzaWx2YXNzYZIBFHNvbGFyX2VuZXJneV9jb21wYW55&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3be7c86c6e5d6429:0x4d43856bf5803219" target="_blank" rel="noopener noreferrer">Mumbai, Maharashtra</a></p></div>
@@ -765,7 +765,7 @@ function StorePageContent() {
     <main className={styles.page}>
       <header>
         <Logo />
-        <Link href="/" aria-label="Home"><img src="/assets/Navbar/GS.png" alt="" className="navbar-ig" /></Link>
+        <Link href="/" aria-label="Home"><img src="/assets/Navbar/GS.webp" alt="" className="navbar-ig" /></Link>
         <nav>
           <Link href="/about-us">About Us</Link>
           <Link href="/services">Services</Link>

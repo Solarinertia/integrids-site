@@ -9,13 +9,13 @@ import { useEffect, useMemo, useState } from "react";
 import { submitEnquiry } from "@/lib/enquiryClient";
 
 const services: [string, string, string, React.ReactNode][] = [
-  ["Solar Cleaning", "Professional cleaning for peak output.", "/assets/services/solar Cleaning.png", "▥"],
-  ["Maintenance Services", "Preventive care for long-term performance.", "/assets/Service Page/Maintenance Service.png", "⚙"],
-  ["Inspection Services", "Identify issues early and prevent energy losses.", "/assets/services/Service ispection.png", "⌕"],
-  ["Performance Insights", "Data-driven insights to improve performance.", "/assets/services/Performance Optimization.png",
+  ["Solar Cleaning", "Professional cleaning for peak output.", "/assets/services/solar Cleaning.webp", "▥"],
+  ["Maintenance Services", "Preventive care for long-term performance.", "/assets/Service Page/Maintenance Service.webp", "⚙"],
+  ["Inspection Services", "Identify issues early and prevent energy losses.", "/assets/services/Service ispection.webp", "⌕"],
+  ["Performance Insights", "Data-driven insights to improve performance.", "/assets/services/Performance Optimization.webp",
     <svg key="perf" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
   ],
-  ["AMC Contracts", "Reliable maintenance, year-round.", "/assets/services/AMC Contract.png", "▤"],
+  ["AMC Contracts", "Reliable maintenance, year-round.", "/assets/services/AMC Contract.webp", "▤"],
 ];
 
 const benefits = [
@@ -56,8 +56,8 @@ const trustedLogos = [
 const projects = [
   {
     title: "Dharam Synthesis, Umbergaon",
-    beforeImage: "/assets/Projects/Dharam - Before.png",
-    afterImage: "/assets/Projects/Dharam - After.png",
+    beforeImage: "/assets/Projects/Dharam - Before.webp",
+    afterImage: "/assets/Projects/Dharam - After.webp",
     capacity: "183 kWp",
     generationIncrease: "+18%",
     waterSaved: "1.2 Cr Liters",
@@ -66,8 +66,8 @@ const projects = [
   },
   {
     title: "Oracle Polypack Pvt Ltd, DNH",
-    beforeImage: "/assets/Projects/Oracle - Before.png",
-    afterImage: "/assets/Projects/Oracle - After.png",
+    beforeImage: "/assets/Projects/Oracle - Before.webp",
+    afterImage: "/assets/Projects/Oracle - After.webp",
     capacity: "964 kWp",
     generationIncrease: "+14%",
     waterSaved: "42 Lakh Liters",
@@ -76,8 +76,8 @@ const projects = [
   },
   {
     title: "Roha Dychem Pvt Ltd, Bikaner",
-    beforeImage: "/assets/Projects/Roha Before.png",
-    afterImage: "/assets/Projects/Roha After.png",
+    beforeImage: "/assets/Projects/Roha Before.webp",
+    afterImage: "/assets/Projects/Roha After.webp",
     capacity: "5000 kWp",
     generationIncrease: "+21%",
     waterSaved: "2.4 Cr Liters",
@@ -86,8 +86,8 @@ const projects = [
   },
   {
     title: "Vipul Textiles, Malegaon, MH",
-    beforeImage: "/assets/Projects/vipul textiles - Before.png",
-    afterImage: "/assets/Projects/vipul textiles - After.png",
+    beforeImage: "/assets/Projects/vipul textiles - Before.webp",
+    afterImage: "/assets/Projects/vipul textiles - After.webp",
     capacity: "3039 kWp",
     generationIncrease: "+16%",
     waterSaved: "18 Lakh Liters",
@@ -96,8 +96,8 @@ const projects = [
   },
   {
     title: "Wallace Laboratories, Dharwad",
-    beforeImage: "/assets/Projects/Wallace Before.png",
-    afterImage: "/assets/Projects/Wallace After.png",
+    beforeImage: "/assets/Projects/Wallace Before.webp",
+    afterImage: "/assets/Projects/Wallace After.webp",
     capacity: "558 kWp",
     generationIncrease: "+18%",
     waterSaved: "1.2 Cr Liters",
@@ -119,7 +119,7 @@ function Arrow() {
 function Logo() {
   return (
     <a className="logo" href="#home" aria-label="Clenvo home">
-      <Image className="brand-logo" src="/assets/Navbar/LOGO.png" alt="Integrids" width={1024} height={827} priority />
+      <Image className="brand-logo" src="/assets/Navbar/LOGO.webp" alt="Integrids" width={1024} height={827} priority />
     </a>
   );
 }
@@ -204,7 +204,7 @@ export default function Home() {
     <main className="home-page">
       <header>
         <Logo />
-        <a href="#home" aria-label="Home"><img src="/assets/Navbar/GS.png" alt="" className="navbar-ig" /></a>
+        <a href="#home" aria-label="Home"><img src="/assets/Navbar/GS.webp" alt="" className="navbar-ig" /></a>
         <nav>
           <a href="/about-us">About Us</a>
           <a href="/services">Services</a>
@@ -280,7 +280,7 @@ export default function Home() {
             {services.map(([title, description, image, icon], i) => (
               <article className="service-card reveal-scale" key={title} style={{transitionDelay:`${0.08 + i * 0.09}s`}}>
                 {title === "Solar Cleaning"
-                  ? <div className="service-card-bg-img" style={{backgroundImage:`url('/assets/services/solar%20cleaning%201.png')`}} role="img" aria-label="Solar Cleaning" />
+                  ? <div className="service-card-bg-img" style={{backgroundImage:`url('/assets/services/solar%20cleaning%201.webp')`}} role="img" aria-label="Solar Cleaning" />
                   : <img src={image} alt="" />}
                 <span className="round-icon">{icon}</span>
                 <h3>{title}</h3>
@@ -352,7 +352,7 @@ export default function Home() {
               </div>
               <a className="dark-button" href="#about-us">Know More About Us <Arrow /></a>
             </div>
-            <img className="benefits-image" src="/assets/why-choose/why%20why.png" alt="" />
+            <img className="benefits-image" src="/assets/why-choose/why%20why.webp" alt="" />
           </div>
           <div className="calculator reveal-scale" style={{transitionDelay:"0.15s"}}>
             <h2>ESTIMATE YOUR BENEFITS</h2>
@@ -402,7 +402,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <a className="footer-logo-link" href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }}><img className="footer-logo-img" src="/assets/Navbar/LOGO.png" alt="Integrids" /></a>
+        <a className="footer-logo-link" href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}); }}><img className="footer-logo-img" src="/assets/Navbar/LOGO.webp" alt="Integrids" /></a>
         <div><b>QUICK LINKS</b><p><a href="/">Home</a><br /><a href="/about-us">About Us</a><br /><a href="/services">Services</a><br /><a href="/store">Store</a></p></div>
         <div><b>SERVICES</b><p><a href="/services#cleaning-services">Robotic Cleaning</a><br /><a href="/services#cleaning-services">Manual Cleaning</a><br /><a href="/services#inspection-services">Inspection Services</a><br /><a href="/services#performance-support-services">Performance Optimization</a><br /><a href="/services#performance-support-services">AMC Contracts</a></p></div>
         <div><b>CONTACT US</b><p><a href="tel:+918424097069">8424097069</a><br /><a href="mailto:info@integrids.in">info@integrids.in</a><br /><a href="https://www.google.com/maps/place/SOLARINERTIA+POWER+PVT+LTD/@20.3227691,72.9687473,654m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be0cd8eca385029:0x85d13c646149b569!8m2!3d20.3227641!4d72.9713222!16s%2Fg%2F11q48036y2?entry=ttu&g_ep=EgoyMDI2MDYxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Silvassa, Gujarat</a><br /><a href="https://www.google.com/maps?vet=10CAAQoqAOahcKEwjY6JiFh4mVAxUAAAAAHQAAAAAQLw..i&pvq=CgwvZy8xaGh4OHE3dnciEwoNc29sYXIgaW5lcnRpYRACGAM&lqi=ChZzb2xhciBpbmVydGlhIHNpbHZhc3NhSNu-rMS_j4CACFocEAAQASIWc29sYXIgaW5lcnRpYSBzaWx2YXNzYZIBFHNvbGFyX2VuZXJneV9jb21wYW55&fvr=1&cs=1&um=1&ie=UTF-8&fb=1&gl=in&sa=X&ftid=0x3be7c86c6e5d6429:0x4d43856bf5803219" target="_blank" rel="noopener noreferrer">Mumbai, Maharashtra</a></p></div>

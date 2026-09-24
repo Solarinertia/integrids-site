@@ -140,7 +140,7 @@ h2 { margin:0; font-size:15px; font-weight:900; }
 .contact-popup h3 { margin:0; color:#071037; font-size:20px; font-weight:900; line-height:1.3; }
 .contact-popup p { margin:0; color:#44546e; font-size:14px; font-weight:400; line-height:1.7; }
 .contact-popup-close { margin-top:6px; min-width:120px; background:#4DBCC2; font-size:13px; font-weight:800; padding:10px 28px; }
-.cta { display:flex; flex-direction:column; border-radius:7px; background:linear-gradient(90deg,#061439cc,#06143955),url("/assets/Ready to Boost/Ready to boost.png") center/cover; color:#fff; }
+.cta { display:flex; flex-direction:column; border-radius:7px; background:linear-gradient(90deg,#061439cc,#06143955),url("/assets/Ready to Boost/Ready to boost.webp") center/cover; color:#fff; }
 .cta .button { margin-top:auto; background:#4DBCC2; transition:transform 220ms ease,box-shadow 220ms ease; }
 .cta .button:hover { transform:translateY(-2px) scale(1.02); box-shadow:0 10px 22px rgba(77,188,194,.2); }
 .cta h2 { font-size:25px; line-height:1.16; }
